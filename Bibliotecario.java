@@ -12,23 +12,20 @@ public class Bibliotecario {
     public String getBibNome() {
         return this.nome;
     }
+    public void setBibNome(String nome) {
+        this.nome = nome;
+    }
 
     public int getBibIdade() {
         return this.idade;
+    }
+    public void setBibIdade(int idade) {
+        this.idade = idade;
     }
 
     public int getBibCpf() {
         return this.cpf;
     }
-
-    public void setBibNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setBibIdade(int idade) {
-        this.idade = idade;
-    }
-
     public void setBibCpf(int cpf) {
         this.cpf = cpf;
     }
