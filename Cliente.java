@@ -10,4 +10,32 @@ public class Cliente {
         this.generoFavorito = generoFavorito;
         this.reservas = null;
     }
+
+    public String getNome() {
+        return this.nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return this.idade;
+    }
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public String getGeneroFavorito() {
+        return this.generoFavorito;
+    }
+    public void setGeneroFavorito(String generoFavorito) {
+        this.generoFavorito = generoFavorito;
+    }
+
+    public Livro getReservas() {
+        return this.reservas;
+    }
+    public void setReservas(Livro reservas) {
+        this.reservas = reservas;
+    }
 }
