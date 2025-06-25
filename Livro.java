@@ -1,6 +1,6 @@
 public class Livro {
     private String nome;
-    private String genero ;
+    private String genero;
     private String autor;
     private int ano;
     private boolean status;
