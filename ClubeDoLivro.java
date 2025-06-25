@@ -2,6 +2,8 @@ public class ClubeDoLivro {
     private String dia;
     private int horario;
     private String livro;
+    int cont = 0;
+    private Cliente[] participantes = new Cliente[10];
 
     public ClubeDoLivro(String dia, int horario, String livro) {
         this.dia = dia;
@@ -10,15 +12,15 @@ public class ClubeDoLivro {
     }
 
     public String getDia() {
-        return dia;
+        return this.dia;
     }
 
     public int getHorario() {
-        return horario;
+        return this.horario;
     }
 
     public String getLivro() {
-        return livro;
+        return this.livro;
     }
 
     public String grade() {
@@ -26,6 +28,8 @@ public class ClubeDoLivro {
     }
 
     public String inscrever(Cliente cliente) {
-        return"";
+        participantes[cont] = cliente;
+        cont++;
+        return "";
     }
 }
