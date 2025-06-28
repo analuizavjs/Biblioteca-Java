@@ -5,14 +5,21 @@ public class ClubeDoLivro {
     int cont = 0;
     private Cliente[] participantes = new Cliente[30];
 
+    public Cliente getParticipantes(int i) {
+        return participantes[i];
+    }
+
     public String grade() {
         return "";
     }
 
     public String inscrever(Cliente cliente) {
-        if()
-        participantes[cont] = cliente;
-        cont++;
-        return "Inscrição confirmada";
+        if(listaDeClientes() == cliente) {
+            participantes[cont] = cliente;
+            cont++;
+            return "Inscrição confirmada";
+        } else {
+            return "Cliente não cadastrado";
+        }
     }
 }
