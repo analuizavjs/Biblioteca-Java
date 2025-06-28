@@ -1,9 +1,10 @@
 public class Livro {
-    private String nome;
-    private String genero;
-    private String autor;
-    private int ano;
-    private boolean status;
+    private String[] nome = {"O Poder do Hábito", "Mindset: A Nova Psicologia do Sucesso", "Os 7 Hábitos das Pessoas Altamente Eficazes", 
+                             "A Ilha do Tesouro", "Vinte Mil Léguas Submarinas", };
+    private String[] genero = {"Autoajuda", "Aventura", "Biografia", "Fantasia", "Ficção Científica", "Infantil", "Juvenil", "Romance", "Suspense", "Terror"};
+    private String[] autor = {"Charles Duhigg", "Carol S. Dweck", "Stephen R. Covey", "Robert Louis Stevenson", "Júlio Verne"};
+    private int[] ano = {2012, 2006, 1989, 1883, 1870, };
+    private boolean status = true;
 
     public String getNome() {
         return this.nome;
