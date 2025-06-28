@@ -36,20 +36,20 @@ public class Livro {
 
     private boolean status = true;
 
-    public String getNome() {
-        return this.nome;
+    public String getNome(int i) {
+        return this.nome[i];
     }
 
-    public String getGenero() {
-        return this.genero;
+    public String getGenero(int i) {
+        return this.genero[i];
     }
 
-    public String getAutor() {
-        return this.autor;
+    public String getAutor(int i) {
+        return this.autor[i];
     }
 
-    public int getAno() {
-        return this.ano;
+    public int getAno(int i) {
+        return this.ano[i];
     }
 
     public boolean getStatus() {
@@ -57,11 +57,12 @@ public class Livro {
     }
 
     public String reserva(String nome) {
-        if (this.status == true && this.nome == nome) {
+        for(int i = 0; i<nome.length(); i++) {
+        if (this.status == true && this.nome[i] == nome) {
             return "Reserva bem-sucedida";
-        } else {
-            return "Reserva mal-sucedida";
         }
+        }
+        return "Reserva mal-sucedida";
     }
 
     public String lista() {
