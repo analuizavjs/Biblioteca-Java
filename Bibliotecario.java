@@ -1,7 +1,7 @@
 public class Bibliotecario {
     private String nome;
     private int idade;
-    private int cpf;
+    private String cpf;
 
     Livro livro1 = new Livro("Autoajuda", "O Poder do Hábito", "Charles Duhigg", 2012);
     Livro livro2 = new Livro("Autoajuda", "Mindset: A Nova Psicologia do Sucesso", "Carol S. Dweck", 2006);
@@ -93,10 +93,10 @@ public class Bibliotecario {
         this.idade = idade;
     }
 
-    public int getBibCpf() {
+    public String getBibCpf() {
         return this.cpf;
     }
-    public void setBibCpf(int cpf) {
+    public void setBibCpf(String cpf) {
         this.cpf = cpf;
     }
 
