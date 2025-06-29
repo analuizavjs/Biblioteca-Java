@@ -101,14 +101,14 @@ public class Bibliotecario {
     }
 
     public void listaDeLivros() {
-        for(int i = 0; i<listaDeLivros.length; i++) {
-            System.out.println(listaDeLivros[i].toString());
+        for (Livro listaDeLivro : listaDeLivros) {
+            System.out.println(listaDeLivro.toString());
         }
     }
 
     public void listaDeClientes() {
-        for(int i = 0; i<listaDeClientes.length; i++) {
-            System.out.println(listaDeClientes[i].toString());
+        for (Cliente listaDeCliente : listaDeClientes) {
+            System.out.println(listaDeCliente.toString());
         }
     }
 }
