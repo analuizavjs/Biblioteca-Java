@@ -73,7 +73,7 @@ public class Bibliotecario {
                                  cliente11, cliente12, cliente13, cliente14, cliente15, cliente16, cliente17, cliente18, cliente19, cliente20, 
                                  cliente21, cliente22, cliente23, cliente24, cliente25, cliente26, cliente27, cliente28, cliente29, cliente30};
 
-    public Bibliotecario(String nome, int idade, int cpf) {
+    public Bibliotecario(String nome, int idade, String cpf) {
         this.nome = nome;
         this.idade = idade;
         this.cpf = cpf;
