@@ -57,8 +57,8 @@ public final class ClubeDoLivro {
         Random random = new Random();
         for (int i = 0; i < 7; i++) { 
             for (int j = 0; j < 6; j++) { 
-                int indice = random.nextInt(bibliotecario1.listaDeLivros.length); 
-                gradeLivros[i][j] = bibliotecario1.listaDeLivros[indice]; 
+                int indice = random.nextInt(bibliotecario1.getListaDeLivros().length); 
+                gradeLivros[i][j] = bibliotecario1.getListaDeLivros()[indice]; 
             }
         }
     }
