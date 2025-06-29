@@ -4,13 +4,19 @@ public class Cliente {
     private String generoFavorito;
     private Livro livroReservado;
 
+    public Cliente(String nome, int idade, String generoFavorito) {
+        this.nome = nome;
+        this.idade = idade;
+        this.generoFavorito = generoFavorito;
+    }
+    
     public Cliente(String nome, int idade, String generoFavorito, Livro livroReservado) {
         this.nome = nome;
         this.idade = idade;
         this.generoFavorito = generoFavorito;
         this.livroReservado = livroReservado;
     }
-
+    
     public String getNome() {
         return this.nome;
     }
@@ -38,9 +44,13 @@ public class Cliente {
     public void setLivroReservado(Livro livroReservado) {
         this.livroReservado = livroReservado;
     }
-
+    
+    public String toStringNovo() {
+        return String.format("Nome: %-30s | Idade: %-3d | Gênero Favorito: %-18s ", this.nome, this.idade, this.generoFavorito);
+    }
+    
     @Override
     public String toString() {
-        return String.format("Nome: %30s | Idade: %3d | Gênero Favorito: %18s | Livro Reservado: %30s", this.nome, this.idade, this.generoFavorito, this.livroReservado.getNome());
+        return String.format("Nome: %-30s | Idade: %-3d | Gênero Favorito: %-18s | Livro Reservado: %-30s", this.nome, this.idade, this.generoFavorito, this.livroReservado.getNome());
     }
 }
