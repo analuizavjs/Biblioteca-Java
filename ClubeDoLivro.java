@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class ClubeDoLivro {
+public final class ClubeDoLivro {
     private String[] dia = {"segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"};
     private String[] horario = {"9h", "10h", "11h", "14h", "15h", "16h"};
     private Livro[][] gradeLivros = new Livro[7][6]; 
@@ -14,15 +14,36 @@ public class ClubeDoLivro {
         preencherGrade();
     }
 
-    
+    public String[] getDia() {
+        return dia;
+    }
+    public void setDia(String[] dia) {
+        this.dia = dia;
+    }    
+
     public Cliente getParticipantes(int i) {
         return participantes[i];
     }
 
-   
+    public String[] getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String[] horario) {
+        this.horario = horario;
+    }
+
+    public Livro[][] getGradeLivros() {
+        return gradeLivros;
+    }
+
+    public void setGradeLivros(Livro[][] gradeLivros) {
+        this.gradeLivros = gradeLivros;
+    }
+
     public String inscrever(Cliente cliente) {
-        for(int i = 0; i < bibliotecario1.listaDeClientes.length; i++) {
-            if(bibliotecario1.listaDeClientes[i] == cliente) {
+        for (Cliente listaDeCliente : bibliotecario1.listaDeClientes) {
+            if (listaDeCliente == cliente) {
                 participantes[cont] = cliente;
                 cont++;
                 return "Inscrição confirmada";
@@ -53,4 +74,6 @@ public class ClubeDoLivro {
         }
         return resultado;
     }
+
+ 
 }
