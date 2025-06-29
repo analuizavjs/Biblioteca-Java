@@ -139,16 +139,7 @@ public class Livro {
         return "Reserva mal-sucedida";
     }
 
-    public String lista() {
-        return String.format("%18s | %60s | %60s | %60\n", "Autoajuda", "O Poder do Hábito", "Mindset: A Nova Psicologia do Sucesso", "Os 7 Hábitos das Pessoas Altamente Eficazes"+
-                             "%18s | %60s | %60s | %60\n", "Aventura", "A Ilha do Tesouro", "Vinte Mil Léguas Submarinas", "O Senhor dos Anéis: A Sociedade do Anel"+
-                             "%18s | %60s | %60s | %60\n", "Biografia", "Longa Caminhada até a Liberdade", "Steve Jobs", "O Diário de Anne Frank"+
-                             "%18s | %60s | %60s | %60\n", "Fantasia", "Harry Potter e a Pedra Filosofal", "As Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa", "Eragon"+
-                             "%18s | %60s | %60s | %60\n", "Ficção Científica", "1984", "Fahrenheit 451", "Duna"+
-                             "%18s | %60s | %60s | %60\n", "Infantil", "O Pequeno Príncipe", "Marcelo, Marmelo, Martelo", "Menina Bonita do Laço de Fita"+
-                             "%18s | %60s | %60s | %60\n", "Juvenil", "A Culpa é das Estrelas", "Percy Jackson e o Ladrão de Raios", "Jogos Vorazes"+
-                             "%18s | %60s | %60s | %60\n", "Romance", "Orgulho e Preconceito", "Romeu e Julieta", "O Morro dos Ventos Uivantes"+
-                             "%18s | %60s | %60s | %60\n", "Suspense", "Garota Exemplar", "O Silêncio dos Inocentes", "A Garota no Trem"+
-                             "%18s | %60s | %60s | %60\n", "Terror", "O Iluminado", "Drácula", "Frankenstein");
+    public String toString() {
+        return String.format("Gênero: %18s | Nome: %60s | Autor: %30s | Ano de Publicação: %5d", this.genero, this.nome, this.autor, this.ano);
     }
 }
