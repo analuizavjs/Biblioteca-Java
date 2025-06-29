@@ -1,6 +1,4 @@
-import java.util.Random;
-
-public final class ClubeDoLivro {
+public class ClubeDoLivro {
     private String[] dia = {"segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"};
     private String[] horario = {"9h", "10h", "11h", "14h", "15h", "16h"};
     private Livro[][] gradeLivros = new Livro[7][6]; 
@@ -8,42 +6,14 @@ public final class ClubeDoLivro {
     int cont = 0;
     Cliente[] participantes = new Cliente[30];
     Bibliotecario bibliotecario1 = new Bibliotecario("Carlos Henrique da Silva", 42, "321.654.987-00");
-
-    
-    public ClubeDoLivro() {
-        preencherGrade();
-    }
-
-    public String[] getDia() {
-        return dia;
-    }
-    public void setDia(String[] dia) {
-        this.dia = dia;
-    }    
-
+  
     public Cliente getParticipantes(int i) {
         return participantes[i];
     }
 
-    public String[] getHorario() {
-        return horario;
-    }
-
-    public void setHorario(String[] horario) {
-        this.horario = horario;
-    }
-
-    public Livro[][] getGradeLivros() {
-        return gradeLivros;
-    }
-
-    public void setGradeLivros(Livro[][] gradeLivros) {
-        this.gradeLivros = gradeLivros;
-    }
-
     public String inscrever(Cliente cliente) {
-        for (Cliente listaDeCliente : bibliotecario1.listaDeClientes) {
-            if (listaDeCliente == cliente) {
+        for(int i = 0; i < bibliotecario1.listaDeClientes.length; i++) {
+            if(bibliotecario1.listaDeClientes[i] == cliente) {
                 participantes[cont] = cliente;
                 cont++;
                 return "Inscrição confirmada";
@@ -51,29 +21,25 @@ public final class ClubeDoLivro {
         }
         return "Cliente não cadastrado";
     }
-
     
-    public void preencherGrade() {
-        Random random = new Random();
-        for (int i = 0; i < 7; i++) { 
-            for (int j = 0; j < 6; j++) { 
-                int indice = random.nextInt(bibliotecario1.getListaDeLivros().length); 
-                gradeLivros[i][j] = bibliotecario1.getListaDeLivros()[indice]; 
-            }
-        }
-    }
-
-    
-    public String grade() {
-        String resultado = "GRADE DE LEITURA:\n";
-        for (int i = 0; i < 7; i++) {
-            resultado += dia[i] + ":\n";
-            for (int j = 0; j < 6; j++) {
-                resultado += "  " + horario[j] + " - " + gradeLivros[i][j].getNome() + "\n";
-            }
-        }
-        return resultado;
-    }
-
- 
+    public void grade() {
+        System.out.println(String.format(
+            """
+            | %3s | %8s | %8s | %8s | %8s | %8s | %8s | %8s |
+            | %3s | %60s | %60s | %60s | %60s | %60s | %60s | %60s |
+            | %3s | %60s | %60s | %60s | %60s | %60s | %60s | %60s |
+            | %3s | %60s | %60s | %60s | %60s | %60s | %60s | %60s |
+            | %3s | %60s | %60s | %60s | %60s | %60s | %60s | %60s |
+            | %3s | %60s | %60s | %60s | %60s | %60s | %60s | %60s |
+            | %3s | %60s | %60s | %60s | %60s | %60s | %60s | %60s |
+            """,
+            "   ", "segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo",
+            "9h", "O Poder do Hábito", "Mindset: A Nova Psicologia do Sucesso", "Os 7 Hábitos das Pessoas Altamente Eficazes", "A Ilha do Tesouro", "Vinte Mil Léguas Submarinas", "O Senhor dos Anéis: A Sociedade do Anel", "Longa Caminhada até a Liberdade",
+            "10h", "Steve Jobs", "O Diário de Anne Frank", "Harry Potter e a Pedra Filosofal", "As Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa", "Eragon", "1984", "Fahrenheit 451",
+            "11h", "Duna", "O Pequeno Príncipe", "Marcelo, Marmelo, Martelo", "Menina Bonita do Laço de Fita", "A Culpa é das Estrelas", "Percy Jackson e o Ladrão de Raios", "Jogos Vorazes",
+            "14h", "Orgulho e Preconceito", "Romeu e Julieta", "O Morro dos Ventos Uivantes", "Garota Exemplar", "O Silêncio dos Inocentes", "A Garota no Trem", "O Iluminado",
+            "15h", "Drácula", "Frankenstein", "O Poder do Hábito", "Mindset: A Nova Psicologia do Sucesso", "Os 7 Hábitos das Pessoas Altamente Eficazes", "A Ilha do Tesouro", "Vinte Mil Léguas Submarinas",
+            "16h", "O Senhor dos Anéis: A Sociedade do Anel", "Longa Caminhada até a Liberdade", "Steve Jobs", "O Diário de Anne Frank", "Harry Potter e a Pedra Filosofal", "As Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa", "Eragon"
+        ));
+}
 }

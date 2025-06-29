@@ -1,9 +1,9 @@
 public class Livro {
-    private final String genero;
-    private final String nome;
-    private final String autor;
-    private final int ano;
-    private final boolean status;
+    private String genero;
+    private String nome;
+    private String autor;
+    private int ano;
+    private boolean status;
 
     Livro livro1 = new Livro("Autoajuda", "O Poder do Hábito", "Charles Duhigg", 2012);
     Livro livro2 = new Livro("Autoajuda", "Mindset: A Nova Psicologia do Sucesso", "Carol S. Dweck", 2006);
@@ -51,21 +51,36 @@ public class Livro {
     public String getNome() {
         return this.nome;
     }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public String getGenero() {
         return this.genero;
+    }
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
     public String getAutor() {
         return this.autor;
     }
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
 
     public int getAno() {
         return this.ano;
     }
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
 
     public boolean getStatus() {
         return this.status;
+    }
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
     public String reserva(Cliente cliente, int g, int n) {

@@ -2,7 +2,9 @@ public class Bibliotecario {
     private String nome;
     private int idade;
     private String cpf;
+
     Cliente[] listaDeClientes = new Cliente[30];
+    
     Livro[] listaDeLivros = new Livro[50]; // Adiciona o array de livros
 
 
