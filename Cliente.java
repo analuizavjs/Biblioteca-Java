@@ -2,13 +2,13 @@ public class Cliente {
     private String nome;
     private int idade;
     private String generoFavorito;
-    private Livro reservas;
+    private Livro livroReservado;
 
-    public Cliente(String nome, int idade, String generoFavorito) {
+    public Cliente(String nome, int idade, String generoFavorito, Livro livroReservado) {
         this.nome = nome;
         this.idade = idade;
         this.generoFavorito = generoFavorito;
-        this.reservas = null;
+        this.livroReservado = livroReservado;
     }
 
     public String getNome() {
@@ -32,10 +32,10 @@ public class Cliente {
         this.generoFavorito = generoFavorito;
     }
 
-    public Livro getReservas() {
-        return this.reservas;
+    public Livro getLivroReservado() {
+        return this.livroReservado;
     }
-    public void setReservas(Livro reservas) {
-        this.reservas = reservas;
+    public void setLivroReservado(Livro livroReservado) {
+        this.livroReservado = livroReservado;
     }
 }
