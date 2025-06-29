@@ -38,4 +38,8 @@ public class Cliente {
     public void setLivroReservado(Livro livroReservado) {
         this.livroReservado = livroReservado;
     }
+
+    public String toString() {
+        return String.format("Nome: %30s | Idade: %3d | Gênero Favorito: %18s | Livro Reservado: ", this.nome, this.idade, this.generoFavorito, this.livroReservado.getNome());
+    }
 }
