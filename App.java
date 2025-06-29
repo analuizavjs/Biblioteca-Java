@@ -170,8 +170,9 @@ public class App {
                         }
                         
                     case 3:
-                        System.out.println("1 - Autoajuda\n2 - Aventura\n3 - Biografia\n4 - Fantasia\n5 - Ficção Científica\n6 -- Infantil\n7 - Juvenil\n8 - Romamnce\n9 - ")
-                        System.out.println("Qual gênero você deseja? ")
+                        System.out.println("1 - Autoajuda\n2 - Aventura\n3 - Biografia\n4 - Fantasia\n5 - Ficção Científica\n6 -- Infantil\n7 - Juvenil\n8 - Romamnce\n9 - ");
+                        System.out.println("Qual gênero você deseja? ");
                 }
         }
     }
+}
