@@ -82,11 +82,12 @@ public class App {
             
             
             
-        int n1, n2, n3, idade, novaIdade;
-        String nome, generoFavorito, novoNome, novoGenero;
+        int n1, n2, n3, n4, idade, novaIdade, novoGenero;
+        String nome, generoFavorito, novoNome;
         Scanner sc = new Scanner(System.in);
         Bibliotecario bibliotecario3 = new Bibliotecario("João Pereira", 42, "987.654.321-11");
         Cliente cliente;
+        ClubeDoLivro clube = new ClubeDoLivro();
         
         System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.println("Seja bem-vindo(a) a Biblioteca");
@@ -170,9 +171,90 @@ public class App {
                         }
                         
                     case 3:
-                        System.out.println("1 - Autoajuda\n2 - Aventura\n3 - Biografia\n4 - Fantasia\n5 - Ficção Científica\n6 -- Infantil\n7 - Juvenil\n8 - Romamnce\n9 - ");
+                        System.out.println("1 - Autoajuda\n2 - Aventura\n3 - Biografia\n4 - Fantasia\n5 - Ficção Científica\n6 -- Infantil\n7 - Juvenil\n8 - Romamnce\n9 - Suspense\n10 - Terror\n");
                         System.out.println("Qual gênero você deseja? ");
+                        n3 = sc.nextInt();
+
+                        switch(n3) {
+                            case 1:
+                                System.out.println("1 - O Poder do Hábito\n2 - Mindset: A Nova Psicologia do Sucesso\n3 - Os 7 Hábitos das Pessoas Altamente Eficazes\n");
+                                System.out.println("Qual livro você deseja?");
+                                n4 = sc.nextInt();
+                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                break;
+                            
+                            case 2:
+                                System.out.println("1 - A Ilha do Tesouro\n2 - Vinte Mil Léguas Submarinas\n3 - O Senhor dos Anéis: A Sociedade do Anel\n");
+                                System.out.println("Qual livro você deseja?");
+                                n4 = sc.nextInt();
+                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                break;
+                            
+                            case 3:
+                                System.out.println("1 - Longa Caminhada até a Liberdade\n2 - Steve Jobs\n3 - O Diário de Anne Frank\n");
+                                System.out.println("Qual livro você deseja?");
+                                n4 = sc.nextInt();
+                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                break;
+                            
+                            case 4:
+                                System.out.println("Qual livro você deseja?");
+                                n4 = sc.nextInt();
+                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                break;
+                            
+                            case 5:
+                                System.out.println("Qual livro você deseja?");
+                                n4 = sc.nextInt();
+                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                break;
+                            
+                            case 6:
+                                System.out.println("Qual livro você deseja?");
+                                n4 = sc.nextInt();
+                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                break;
+                            
+                            case 7:
+                                System.out.println("Qual livro você deseja?");
+                                n4 = sc.nextInt();
+                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                break;
+                            
+                            case 8:
+                                System.out.println("Qual livro você deseja?");
+                                n4 = sc.nextInt();
+                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                break;
+                            
+                            case 9:
+                                System.out.println("Qual livro você deseja?");
+                                n4 = sc.nextInt();
+                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                break;
+
+                            case 10:
+                                System.out.println("Qual livro você deseja?");
+                                n4 = sc.nextInt();
+                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                break;
+                        }
+                        break;
+
+                    case 4:
+                        clube.inscrever(cliente31);
+                        break;
+                    
+                    case 5:
+                        System.out.println(clube.grade());
+                        break;
+                    
+                    case 6:
+                        System.out.println(clube.getParticipantes());
+                        break;
+                    
+                    case 7:
+                        
                 }
         }
     }
-}
