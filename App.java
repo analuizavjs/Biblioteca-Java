@@ -82,8 +82,8 @@ public class App {
             
             
             
-        int n1, n2, n3, idade, novaIdade, novoGenero;
-        String nome, generoFavorito, novoNome;
+        int n1, n2, n3, idade, novaIdade;
+        String nome, generoFavorito, novoNome, novoGenero;
         Scanner sc = new Scanner(System.in);
         Bibliotecario bibliotecario3 = new Bibliotecario("João Pereira", 42, "987.654.321-11");
         Cliente cliente;
