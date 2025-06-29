@@ -6,6 +6,10 @@ public class ClubeDoLivro {
     int cont = 0;
     Cliente[] participantes = new Cliente[30];
     Bibliotecario bibliotecario1 = new Bibliotecario("Carlos Henrique da Silva", 42, "321.654.987-00");
+
+    public ClubeDoLivro() {
+        
+    }
   
     public Cliente getParticipantes(int i) {
         return participantes[i];

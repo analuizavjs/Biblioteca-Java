@@ -1,5 +1,6 @@
 public class App {
     public static void main(String[] args) {
-        System.out.println("OOOOOOOOOHHHHHH MY GOOOOOOD");
+        ClubeDoLivro clube = new ClubeDoLivro();
+        clube.grade();
     }
 }
