@@ -170,6 +170,7 @@ public class Livro {
         return "Reserva mal-sucedida";
     }
 
+    @Override
     public String toString() {
         return String.format("Gênero: %18s | Nome: %60s | Autor: %30s | Ano de Publicação: %5d", this.genero, this.nome, this.autor, this.ano);
     }
