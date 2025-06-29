@@ -3,7 +3,7 @@ public class ClubeDoLivro {
     private String[] horario = {"9h", "10h", "11h", "14h", "15h", "16h"};
     private String livro;
     int cont = 0;
-    private Cliente[] participantes = new Cliente[30];
+    Cliente[] participantes = new Cliente[30];
 
     public Cliente getParticipantes(int i) {
         return participantes[i];
@@ -14,12 +14,13 @@ public class ClubeDoLivro {
     }
 
     public String inscrever(Cliente cliente) {
-        if(listaDeClientes() == cliente) {
-            participantes[cont] = cliente;
-            cont++;
-            return "Inscrição confirmada";
-        } else {
-            return "Cliente não cadastrado";
+        for(int i = 0; i<listaDeClientes.length; i++) {
+            if(listaDeClientes[i] == cliente) {
+                participantes[cont] = cliente;
+                cont++;
+                return "Inscrição confirmada";
+            }
         }
+        return "Cliente não cadastrado";
     }
 }
