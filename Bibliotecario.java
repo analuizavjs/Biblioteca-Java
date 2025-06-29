@@ -100,13 +100,15 @@ public class Bibliotecario {
         this.cpf = cpf;
     }
 
-    public Livro listaDeLivros() {
+    public void listaDeLivros() {
         for(int i = 0; i<listaDeLivros.length; i++) {
-            listaDeLivros[i].toString();
+            System.out.println(listaDeLivros[i].toString());
         }
     }
 
-    public Cliente listaDeClientes() {
-
+    public void listaDeClientes() {
+        for(int i = 0; i<listaDeClientes.length; i++) {
+            System.out.println(listaDeClientes[i].toString());
+        }
     }
 }
