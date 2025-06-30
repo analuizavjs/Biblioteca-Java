@@ -1,6 +1,11 @@
+// Importa a classe Scanner para entrada de dados pelo teclado
 import java.util.Scanner;
+
+// Início da classe principal App
 public class App {
+    // Método principal que inicia o programa
     public static void main(String[] args) {
+        // Criação de 30 objetos da classe Livro, cada um com seus atributos específicos
         Livro livro1 = new Livro("Autoajuda", "O Poder do Hábito", "Charles Duhigg", 2012);
         Livro livro2 = new Livro("Autoajuda", "Mindset: A Nova Psicologia do Sucesso", "Carol S. Dweck", 2006);
         Livro livro3 = new Livro("Autoajuda", "Os 7 Hábitos das Pessoas Altamente Eficazes", "Stephen R. Covey", 1989);
@@ -32,10 +37,12 @@ public class App {
         Livro livro29 = new Livro("Terror", "Drácula", "Bram Stoker", 1897);
         Livro livro30 = new Livro("Terror", "Frankenstein", "Mary Shelley", 1818);
         
+        // Cria um vetor para armazenar até 40 livros
         Livro[] listaDeLivros = new Livro[40];
         Livro[] guardados = {livro1, livro2, livro3, livro4, livro5, livro6, livro7, livro8, livro9, livro10, 
                                livro11, livro12, livro13, livro14, livro15, livro16, livro17, livro18, livro19, livro20, 
                                livro21, livro22, livro23, livro24, livro25, livro26, livro27, livro28, livro29, livro30};
+         // Copia os livros do array guardados para listaDeLivros                      
         for(int i = 0; i<guardados.length; i++) {
             listaDeLivros[i] = guardados[i];
         }
@@ -46,9 +53,11 @@ public class App {
         Cliente cliente4 = new Cliente("Bruna", 27, "Infantil", livro18);
         Cliente cliente5 = new Cliente("Bruno", 37, "Autoajuda", livro3);
         
+        // Cria vetor para armazenar até 40 clientes
         Cliente[] listaDeClientes = new Cliente[40];
         Cliente[] cadastrados = {cliente1, cliente2, cliente3, cliente4, cliente5};
-                                
+        
+        // Adiciona os clientes cadastrados na lista
         for(int i = 0; i<cadastrados.length; i++) {
             listaDeClientes[i] = cadastrados[i];
         }
@@ -61,14 +70,18 @@ public class App {
 
         Bibliotecario[] Bibcadastrados = {bibliotecario1, bibliotecario2, bibliotecario3, bibliotecario4};
 
+        // Copia os bibliotecários cadastrados
         for(int i = 0; i < listaDeBibliotecarios.length; i++) {
             if (i < 4) {
+                // Cadastrados nas primeiras posições
                 listaDeBibliotecarios[i] = Bibcadastrados[i];
             } else {
+                // Demais posições ficam vazias
                 listaDeBibliotecarios[i] = null;
             }
         }
-            
+         
+        // Declaração de variáveis de controle e entrada de dados
         int n1 = 1, n2 = 1, n3, n4, idade, novaIdade, idadeBibliotecario;
         String nome, generoFavorito, novoNome, novoGenero, username, nomeBibliotecario, cpf;
         Scanner sc = new Scanner(System.in);
@@ -79,6 +92,7 @@ public class App {
         System.out.println("Seja bem-vindo(a) a Biblioteca");
         System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
        
+        // Loop do menu principal até o usuário digitar 5 para sair
         while(n1 != 5){
         System.out.println("\n1 - Cadastro de Cliente\n2 - Entrar como Cliente\n3 - Cadastro de Bibliotecário\n4 - Entrar como Bibliotecário\n5 - Sair");
         System.out.println("Digite o número da opção desejada: ");
@@ -100,25 +114,26 @@ public class App {
                 System.out.println("Digite seu gênero favorito: ");
                 generoFavorito = sc.next();
                 
+                // Cria cliente
                 Cliente cliente6 = new Cliente(nome, idade, generoFavorito);
                 listaDeClientes[6] = cliente6;
                 
                 System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 System.out.println("Seja bem-vindo(a) Cliente");
                 System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-
+                //Laço de repetição que repete o menu de funcionalidades até o usuário decidir voltar ao menu principal ou sair do código
                 while(n2!=8)  {
 
                 System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Reservar livro\n4 - Inscrever-se para o Clube do Livro\n5 - Mostrar grade de horários do clube do livro\n6 - Mostrar participantes do clube do livro\n7 - Mostrar lista de livros\n8 - Voltar ao menu\n9 - Sair");
                 System.out.println("Qual funcionalidade você deseja acessar?");
                 n2 = sc.nextInt();
-                
+                //Switch case da opção de funcionalidade que o usuário escolher
                 switch(n2) {
                     case 1:
                         System.out.println("\n1 - Seu nome\n2 - Sua idade\n3 - Seu gênero favorito\n4 - Todos os seus dados\n");
                         System.out.println("Quais dados você deseja mostrar? ");
                         n3 = sc.nextInt();
-                        
+                        //O usuário escolhe qual dado ele quer mostrar
                         switch(n3) {
                             case 1:
                                 System.out.println(cliente6.getNome());
@@ -140,7 +155,7 @@ public class App {
                                 break;
                         }
                         break;
-                        
+                    // O usuário escolhe o dado que ele quer mudar (setar)
                     case 2:
                         System.out.println("\n1 - Seu nome\n2 - Sua idade\n3 - Seu gênero favorito\n");
                         System.out.println("Quais dados você deseja mudar? ");
@@ -166,12 +181,12 @@ public class App {
                                 break;
                         }
                         break;
-                        
+                    // Case que chama a função reserva da classe livro
                     case 3:
                         System.out.println("\n1 - Autoajuda\n2 - Aventura\n3 - Biografia\n4 - Fantasia\n5 - Ficção Científica\n6 - Infantil\n7 - Juvenil\n8 - Romamnce\n9 - Suspense\n10 - Terror\n");
                         System.out.println("Qual gênero você deseja? ");
                         n3 = sc.nextInt();
-
+                        // O usuário escolhe o livro depois de já ter escolhido o gênero
                         switch(n3) {
                             case 1:
                                 System.out.println("\n1 - O Poder do Hábito\n2 - Mindset: A Nova Psicologia do Sucesso\n3 - Os 7 Hábitos das Pessoas Altamente Eficazes\n");
@@ -244,19 +259,19 @@ public class App {
                                 break;
                         }
                         break;
-
+                    // O usuário se inscreve no clube do livro
                     case 4:
                         clube.inscrever(cliente6);
                         break;
-                    
+                    // Mostra a grade de horários do Clube do Livro
                     case 5:
-                    clube.grade();
-                    break;
-                    
+                        clube.grade();
+                        break;
+                    // Mostra a lista de participantes do Clube do Livro
                     case 6:
                         System.out.println(clube.getParticipantes());
                         break;
-                    
+                    // Mostra toda a lista de livros
                     case 7:
                         for (int i = 0; i < listaDeLivros.length; i++) {
                             if (listaDeLivros[i] != null) {
@@ -264,11 +279,11 @@ public class App {
                             }
                         }
                         break;
-                    
+                    // Volta ao menu principal
                     case 8:
                         System.out.println("De volta ao menu!");
                         break;
-
+                    // Sai do programa
                     case 9:
                         System.out.println("Obrigado por utilizar nosso sistema!");
                         return;
