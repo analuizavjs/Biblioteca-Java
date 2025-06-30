@@ -29,4 +29,8 @@ public class Bibliotecario {
     public void setBibCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    public String toBibString() {
+        return String.format("Nome: %-30s | Idade: %-3d | CPF: %-11s", this.nome, this.idade, this.cpf);
+    }
 }
