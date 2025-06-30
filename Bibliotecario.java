@@ -37,6 +37,6 @@ public class Bibliotecario {
     // Método que retorna uma representação em texto formatado do bibliotecário
     public String toBibString() {
         // Retorna uma string com os dados do bibliotecário formatados
-        return String.format("Nome: %-30s | Idade: %-3d | CPF: %-11s", this.nome, this.idade, this.cpf);
+        return String.format("Nome: %-7s | Idade: %-3d | CPF: %-11s", this.nome, this.idade, this.cpf);
     }
 }
