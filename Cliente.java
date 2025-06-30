@@ -53,7 +53,7 @@ public class Cliente {
     
     // Método personalizado que retorna apenas os dados principais do cliente (sem o livro)
     public String toStringNovo() {
-        return String.format("Nome: %-15s | Idade: %-3d | Gênero Favorito: %-18s ", this.nome, this.idade, this.generoFavorito);
+        return String.format("Nome: %-7s | Idade: %-3d | Gênero Favorito: %-18s ", this.nome, this.idade, this.generoFavorito);
     }
     
     // Anotação que indica sobrescrita do método toString da classe Object
@@ -61,6 +61,6 @@ public class Cliente {
     // Método toString completo, incluindo o nome do livro reservado
     public String toString() {
         // Retorna string com todas as informações do cliente
-        return String.format("Nome: %-15s | Idade: %-3d | Gênero Favorito: %-18s | Livro Reservado: %-30s", this.nome, this.idade, this.generoFavorito, this.livroReservado.getNome());
+        return String.format("Nome: %-7s | Idade: %-3d | Gênero Favorito: %-18s | Livro Reservado: %-30s", this.nome, this.idade, this.generoFavorito, this.livroReservado.getNome());
     }
 }
