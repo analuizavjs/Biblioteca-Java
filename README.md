@@ -7,12 +7,15 @@ Como Usar:
 - Acesse e rode o arquivo "App.java", escolha o que deseja fazer.
 
 Funcionalidades:
-- Cadastro de Livros, Bibliotecário, Cliente;
-- Apresentação de lista de livros e cliente;
+- Entrar como Cliente e Bibliotecário;
+- Cadastro de Bibliotecário e Cliente;
+- Mostrar dados do Cliente e do Bibliotecário;
+- Mudar dados do Cliente e do Bibliotecário;
+- Apresentação de lista de livros;
 - Sobrescrita do Cliente e do Livro;
 - Inscrição no Clube do Livro;
-- Preenchimento aleatório da grade de horários;
-- Apresentação da grade de horários;
+- Apresentação da grade de horários do Clube do Livro;
+- Mostrar participantes do Clube do Livro;
 - Função de reserva de livro.
 
 Repositório do GitHub:

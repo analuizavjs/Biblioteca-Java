@@ -40,31 +40,20 @@ public class App {
             listaDeLivros[i] = guardados[i];
         }
                                  
-        Cliente cliente1 = new Cliente("Aline", 28, "Romance", livro21);
+        Cliente cliente1 = new Cliente("Pedro", 28, "Romance", livro21);
         Cliente cliente2 = new Cliente("Ana", 21, "Juvenil", livro24);
         Cliente cliente3 = new Cliente("Almeida", 29, "Suspense", livro27);
         Cliente cliente4 = new Cliente("Bruna", 27, "Infantil", livro18);
         Cliente cliente5 = new Cliente("Bruno", 37, "Autoajuda", livro3);
-        Cliente cliente6 = new Cliente("Camila", 31, "Aventura", livro4);
-        Cliente cliente7 = new Cliente("Carlos", 34, "Terror", livro29);
-        Cliente cliente8 = new Cliente("Daniel", 33, "Fantasia", livro10);
-        Cliente cliente9 = new Cliente("Diego", 36, "Ficção Científica", livro15);
-        Cliente cliente10 = new Cliente("Eduardo", 32, "Romance", livro23);
-        Cliente cliente11 = new Cliente("Felipe", 38, "Ficção Científica", livro13);
-        Cliente cliente12 = new Cliente("Fernanda", 25, "Juvenil", livro19);
-        Cliente cliente13 = new Cliente("Gabriel", 22, "Autoajuda", livro2);
-        Cliente cliente14 = new Cliente("Guilherme", 25, "Biografia", livro9);
-        Cliente cliente15 = new Cliente("Heloísa", 24, "Infantil", livro16);
         
         Cliente[] listaDeClientes = new Cliente[40];
-        Cliente[] cadastrados = {cliente1, cliente2, cliente3, cliente4, cliente5, cliente6, cliente7, cliente8, cliente9, cliente10, 
-                                cliente11, cliente12, cliente13, cliente14, cliente15};
+        Cliente[] cadastrados = {cliente1, cliente2, cliente3, cliente4, cliente5};
                                 
         for(int i = 0; i<cadastrados.length; i++) {
             listaDeClientes[i] = cadastrados[i];
         }
             
-        Bibliotecario bibliotecario1 = new Bibliotecario("Aline", 25, "12345678900");
+        Bibliotecario bibliotecario1 = new Bibliotecario("Pedro", 25, "12345678900");
         Bibliotecario bibliotecario2 = new Bibliotecario("Carlos", 30, "09876543211");
         Bibliotecario bibliotecario3 = new Bibliotecario("Fernanda", 28, "11223344556");
         Bibliotecario bibliotecario4 = new Bibliotecario("Gustavo", 35, "66778899001");
@@ -111,8 +100,8 @@ public class App {
                 System.out.println("Digite seu gênero favorito: ");
                 generoFavorito = sc.next();
                 
-                Cliente cliente31 = new Cliente(nome, idade, generoFavorito);
-                listaDeClientes[31] = cliente31;
+                Cliente cliente6 = new Cliente(nome, idade, generoFavorito);
+                listaDeClientes[6] = cliente6;
                 
                 System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 System.out.println("Seja bem-vindo(a) Cliente");
@@ -120,7 +109,7 @@ public class App {
 
                 while(n2!=8)  {
 
-                System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Reservar livro\n4 - Inscrever-se para o Clube do Livro\n5 - Mostrar grade de horários do clube do livro\n6 - Mostrar participantes do clube do livro\n7 - Mostrar lista de livros\n8 - Sair");
+                System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Reservar livro\n4 - Inscrever-se para o Clube do Livro\n5 - Mostrar grade de horários do clube do livro\n6 - Mostrar participantes do clube do livro\n7 - Mostrar lista de livros\n8 - Voltar ao menu\n9 - Sair");
                 System.out.println("Qual funcionalidade você deseja acessar?");
                 n2 = sc.nextInt();
                 
@@ -132,19 +121,19 @@ public class App {
                         
                         switch(n3) {
                             case 1:
-                                System.out.println(cliente31.getNome());
+                                System.out.println(cliente6.getNome());
                                 break;
                                 
                             case 2:
-                                System.out.println(cliente31.getIdade());
+                                System.out.println(cliente6.getIdade());
                                 break;
                             
                             case 3:
-                                System.out.println(cliente31.getGeneroFavorito());
+                                System.out.println(cliente6.getGeneroFavorito());
                                 break;
                                 
                             case 4:
-                                System.out.println(cliente31.toStringNovo());
+                                System.out.println(cliente6.toStringNovo());
                                 break;
                             
                             default:
@@ -161,19 +150,19 @@ public class App {
                             case 1:
                                 System.out.println("Qual é o seu novo nome? ");
                                 novoNome = sc.next();
-                                cliente31.setNome(novoNome);
+                                cliente6.setNome(novoNome);
                                 break;
 
                             case 2:
                                 System.out.println("Qual é a sua nova idade? ");
                                 novaIdade = sc.nextInt();
-                                cliente31.setIdade(novaIdade);
+                                cliente6.setIdade(novaIdade);
                                 break;
                             
                             case 3:    
                                 System.out.println("Qual é o seu novo gênero favorito? ");
                                 novoGenero = sc.next();
-                                cliente31.setGeneroFavorito(novoGenero);
+                                cliente6.setGeneroFavorito(novoGenero);
                                 break;
                         }
                         break;
@@ -188,76 +177,76 @@ public class App {
                                 System.out.println("\n1 - O Poder do Hábito\n2 - Mindset: A Nova Psicologia do Sucesso\n3 - Os 7 Hábitos das Pessoas Altamente Eficazes\n");
                                 System.out.println("Qual livro você deseja?");
                                 n4 = sc.nextInt();
-                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                System.out.println(livro1.reserva(cliente6, n3, n4));
                                 break;
                             
                             case 2:
                                 System.out.println("\n1 - A Ilha do Tesouro\n2 - Vinte Mil Léguas Submarinas\n3 - O Senhor dos Anéis: A Sociedade do Anel\n");
                                 System.out.println("Qual livro você deseja?");
                                 n4 = sc.nextInt();
-                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                System.out.println(livro1.reserva(cliente6, n3, n4));
                                 break;
                             
                             case 3:
                                 System.out.println("\n1 - Longa Caminhada até a Liberdade\n2 - Steve Jobs\n3 - O Diário de Anne Frank\n");
                                 System.out.println("Qual livro você deseja?");
                                 n4 = sc.nextInt();
-                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                System.out.println(livro1.reserva(cliente6, n3, n4));
                                 break;
                             
                             case 4:
                                 System.out.println("\n1 - Harry Potter e a Pedra Filosofal\n2 - As Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa\n3 - Eragon\n");
                                 System.out.println("Qual livro você deseja?");
                                 n4 = sc.nextInt();
-                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                System.out.println(livro1.reserva(cliente6, n3, n4));
                                 break;
                             
                             case 5:
                                 System.out.println("\n1 - 1984\n2 - Fahrenheit 451\n3 - Duna\n");
                                 System.out.println("Qual livro você deseja?");
                                 n4 = sc.nextInt();
-                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                System.out.println(livro1.reserva(cliente6, n3, n4));
                                 break;
                             
                             case 6:
                                 System.out.println("\n1 - O Pequeno Príncipe\n2 - Marcelo, Marmelo, Martelo\n3 - Menina Bonita do Laço de Fita\n");
                                 System.out.println("Qual livro você deseja?");
                                 n4 = sc.nextInt();
-                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                System.out.println(livro1.reserva(cliente6, n3, n4));
                                 break;
                             
                             case 7:
                                 System.out.println("\n1 - A Culpa é das Estrelas\n2 - Percy Jackson e o Ladrão de Raios\n3 - Jogos Vorazes\n");
                                 System.out.println("Qual livro você deseja?");
                                 n4 = sc.nextInt();
-                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                System.out.println(livro1.reserva(cliente6, n3, n4));
                                 break;
                             
                             case 8:
                                 System.out.println("\n1 - Orgulho e Preconceito\n2 - Romeu e Julieta\n3 - O Morro dos Ventos Uivantes\n");
                                 System.out.println("Qual livro você deseja?");
                                 n4 = sc.nextInt();
-                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                System.out.println(livro1.reserva(cliente6, n3, n4));
                                 break;
                             
                             case 9:
                                 System.out.println("\n1 - Garota Exemplar\n2 - O Silêncio dos Inocentes\n3 - A Garota no Trem\n");
                                 System.out.println("Qual livro você deseja?");
                                 n4 = sc.nextInt();
-                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                System.out.println(livro1.reserva(cliente6, n3, n4));
                                 break;
 
                             case 10:
                                 System.out.println("\n1 - O Iluminado\n2 - Drácula\n3 - Frankenstein\n");
                                 System.out.println("Qual livro você deseja?");
                                 n4 = sc.nextInt();
-                                System.out.println(livro1.reserva(cliente31, n3, n4));
+                                System.out.println(livro1.reserva(cliente6, n3, n4));
                                 break;
                         }
                         break;
 
                     case 4:
-                        clube.inscrever(cliente31);
+                        clube.inscrever(cliente6);
                         break;
                     
                     case 5:
@@ -277,6 +266,10 @@ public class App {
                         break;
                     
                     case 8:
+                        System.out.println("De volta ao menu!");
+                        break;
+
+                    case 9:
                         System.out.println("Obrigado por utilizar nosso sistema!");
                         return;
                 }
@@ -304,8 +297,9 @@ public class App {
                 System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 System.out.println("Seja bem-vindo(a) Cliente");
                 System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                n2 = 1;
                 while(n2!=8) {
-                System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Reservar livro\n4 - Inscrever-se para o Clube do Livro\n5 - Mostrar grade de horários do clube do livro\n6 - Mostrar participantes do clube do livro\n7 - Mostrar lista de livros\n8 - Sair");
+                System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Reservar livro\n4 - Inscrever-se para o Clube do Livro\n5 - Mostrar grade de horários do clube do livro\n6 - Mostrar participantes do clube do livro\n7 - Mostrar lista de livros\n8 - Voltar ao menu\n9 - Sair");
                 System.out.println("Qual funcionalidade você deseja acessar?");
                 n2 = sc.nextInt();
                 
@@ -329,7 +323,7 @@ public class App {
                                 break;
                                 
                             case 4:
-                                System.out.println(cliente.toString());
+                                System.out.println(cliente.toStringNovo());
                                 break;
                             
                             default:
@@ -462,6 +456,10 @@ public class App {
                         break;
 
                     case 8:
+                        System.out.println("De volta ao menu!");
+                        break;
+                    
+                    case 9:
                         System.out.println("Obrigado por utilizar nosso sistema!");
                         return;
                 }
@@ -481,8 +479,9 @@ public class App {
                 System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 System.out.println("Seja bem-vindo(a) Bibliotecário");
                 System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                n2 = 1;
                 while(n2!=6) {
-                System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Mostrar grade de horários do clube do livro\n4 - Mostrar participantes do clube do livro\n5 - Mostrar lista de livros\n6 - Sair");
+                System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Mostrar grade de horários do clube do livro\n4 - Mostrar participantes do clube do livro\n5 - Mostrar lista de livros\n6 - Voltar ao menu\n7 - Sair");
                 System.out.println("Qual funcionalidade você deseja acessar?");
                 n2 = sc.nextInt();
 
@@ -557,6 +556,10 @@ public class App {
                         break;
 
                     case 6:
+                        System.out.println("De volta ao menu!");
+                        break;
+                    
+                    case 7:
                         System.out.println("Obrigado por utilizar nosso sistema!");
                         return;
                 }
@@ -584,8 +587,9 @@ public class App {
                 System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 System.out.println("Seja bem-vindo(a) Bibliotecário");
                 System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                n2 = 1;
                 while(n2!=6) {
-                System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Mostrar grade de horários do clube do livro\n4 - Mostrar participantes do clube do livro\n5 - Mostrar lista de livros\n6 - Sair");
+                System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Mostrar grade de horários do clube do livro\n4 - Mostrar participantes do clube do livro\n5 - Mostrar lista de livros\n6 - Voltar ao menu\n7 - Sair");
                 System.out.println("Qual funcionalidade você deseja acessar?");
                 n2 = sc.nextInt();
 
@@ -661,6 +665,10 @@ public class App {
                         break;
 
                     case 6:
+                        System.out.println("De volta ao menu!");
+                        break;
+                    
+                    case 7:
                         System.out.println("Obrigado por utilizar nosso sistema!");
                         return;
                         
@@ -678,5 +686,6 @@ public class App {
                 break;
         } 
       }
+      sc.close();
     }
 }  
