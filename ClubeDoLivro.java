@@ -11,8 +11,13 @@ public class ClubeDoLivro {
         
     }
   
-    public Cliente[] getParticipantes() {
-        return participantes;
+    public String getParticipantes() {
+        for (int i = 0; i < participantes.length; i++) {
+            if(participantes[i] != null) {
+                return participantes[i].getNome();
+            }
+        }
+        return "";
     }
 
     public String inscrever(Cliente cliente) {
