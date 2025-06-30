@@ -190,6 +190,7 @@ public class App {
                                 cliente31.setGeneroFavorito(novoGenero);
                                 break;
                         }
+                        break;
                         
                     case 3:
                         System.out.println("1 - Autoajuda\n2 - Aventura\n3 - Biografia\n4 - Fantasia\n5 - Ficção Científica\n6 -- Infantil\n7 - Juvenil\n8 - Romamnce\n9 - Suspense\n10 - Terror\n");
@@ -371,6 +372,7 @@ public class App {
                                 cliente.setGeneroFavorito(novoGenero);
                                 break;
                         }
+                        break;
                         
                     case 3:
                         System.out.println("1 - Autoajuda\n2 - Aventura\n3 - Biografia\n4 - Fantasia\n5 - Ficção Científica\n6 -- Infantil\n7 - Juvenil\n8 - Romamnce\n9 - Suspense\n10 - Terror\n");
@@ -543,6 +545,7 @@ public class App {
                                 bibliotecario5.setBibCpf(cpf);
                                 break;
                         }
+                        break;
                     
                     case 3:
                         clube.grade();
@@ -652,7 +655,7 @@ public class App {
                         break;
                     
                     case 5:
-                        for (int i = 0; i < listaDeLivros.length; i++) {
+                        for (int i = 0; i < guardados.length; i++) {
                             if (listaDeLivros[i] != null) {
                                 System.out.println(listaDeLivros[i].toString());
                             }
