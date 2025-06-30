@@ -1,11 +1,16 @@
-public class Livro {
+//Declaraçao da classe Livro
+public class Livro { 
+    
+    //Atributos
     private String genero;
     private String nome;
     private String autor;
     private int ano;
     private boolean status;
     
-    public Livro(String genero, String nome, String autor, int ano) {
+    //Construtor 
+    public Livro(String genero, String nome, String autor, int ano) { 
+        //Inicializa os atributos
         this.genero = genero;
         this.nome = nome;
         this.autor = autor;
@@ -13,6 +18,7 @@ public class Livro {
         this.status = true;
     }
 
+    //Métodos getters 
     public String getNome() {
         return this.nome;
     }
@@ -33,7 +39,9 @@ public class Livro {
         return this.status;
     }
 
+    //Método que realiza a reserva do livro com base nos índices de gênero (g) e nome (n)
     public String reserva(Cliente cliente, int g, int n) {
+        // Estrutura switch que avalia o código do gênero
         switch (g) {
             case 1:
                 if(n == 1) {
@@ -136,10 +144,12 @@ public class Livro {
                     return "Reserva de 'Frankenstein' bem sucedida";
                 }
         }
+        // Retorno padrão caso nenhuma das opções anteriores seja válida
         return "Reserva mal-sucedida";
     }
-
+    // Método toString que retorna uma representação formatada do livro
     public String toString() {
+        // Utiliza String.format para exibir os dados do livro com alinhamento
         return String.format("Gênero: %-18s | Nome: %-60s | Autor: %-30s | Ano de Publicação: %-5d", this.genero, this.nome, this.autor, this.ano);
     }
 }   
