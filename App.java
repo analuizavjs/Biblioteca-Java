@@ -124,7 +124,7 @@ public class App {
                 //Laço de repetição que repete o menu de funcionalidades até o usuário decidir voltar ao menu principal ou sair do código
                 while(n2!=8)  {
 
-                System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Reservar livro\n4 - Inscrever-se para o Clube do Livro\n5 - Mostrar grade de horários do clube do livro\n6 - Mostrar participantes do clube do livro\n7 - Mostrar lista de livros\n8 - Voltar ao menu\n9 - Sair");
+                System.out.println("\n1 - Mostrar dados\n2 - Alterar dados\n3 - Reservar livro\n4 - Inscrever-se para o Clube do Livro\n5 - Mostrar grade de horários do clube do livro\n6 - Mostrar participantes do clube do livro\n7 - Mostrar lista de livros\n8 - Voltar ao menu\n9 - Sair");
                 System.out.println("Qual funcionalidade você deseja acessar?");
                 n2 = sc.nextInt();
                 //Switch case da opção de funcionalidade que o usuário escolher
@@ -314,7 +314,7 @@ public class App {
                 System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 n2 = 1;
                 while(n2!=8) {
-                System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Reservar livro\n4 - Inscrever-se para o Clube do Livro\n5 - Mostrar grade de horários do clube do livro\n6 - Mostrar participantes do clube do livro\n7 - Mostrar lista de livros\n8 - Voltar ao menu\n9 - Sair");
+                System.out.println("\n1 - Mostrar dados\n2 - Alterar dados\n3 - Reservar livro\n4 - Inscrever-se para o Clube do Livro\n5 - Mostrar grade de horários do clube do livro\n6 - Mostrar participantes do clube do livro\n7 - Mostrar lista de livros\n8 - Voltar ao menu\n9 - Sair");
                 System.out.println("Qual funcionalidade você deseja acessar?");
                 n2 = sc.nextInt();
                 
@@ -496,7 +496,7 @@ public class App {
                 System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 n2 = 1;
                 while(n2!=6) {
-                System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Mostrar grade de horários do clube do livro\n4 - Mostrar participantes do clube do livro\n5 - Mostrar lista de livros\n6 - Voltar ao menu\n7 - Sair");
+                System.out.println("\n1 - Mostrar dados\n2 - Alterar dados\n3 - Mostrar grade de horários do clube do livro\n4 - Mostrar participantes do clube do livro\n5 - Mostrar lista de livros\n6 - Voltar ao menu\n7 - Sair");
                 System.out.println("Qual funcionalidade você deseja acessar?");
                 n2 = sc.nextInt();
 
@@ -604,7 +604,7 @@ public class App {
                 System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 n2 = 1;
                 while(n2!=6) {
-                System.out.println("\n1 - Mostrar dados\n2 - Setar dados\n3 - Mostrar grade de horários do clube do livro\n4 - Mostrar participantes do clube do livro\n5 - Mostrar lista de livros\n6 - Voltar ao menu\n7 - Sair");
+                System.out.println("\n1 - Mostrar dados\n2 - Alterar dados\n3 - Mostrar grade de horários do clube do livro\n4 - Mostrar participantes do clube do livro\n5 - Mostrar lista de livros\n6 - Voltar ao menu\n7 - Sair");
                 System.out.println("Qual funcionalidade você deseja acessar?");
                 n2 = sc.nextInt();
 
